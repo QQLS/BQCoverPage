@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BQCoverPage_Example' do
+  pod 'BQCoverPage', :path => '../'
+
+  target 'BQCoverPage_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
