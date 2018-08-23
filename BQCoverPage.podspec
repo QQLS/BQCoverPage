@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BQCoverPage'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BQCoverPage.'
+  s.summary          = 'A top tab contain some of controller.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  The controller contain the third pary. Top is cover, center is tab, bottom is sub controller.
                        DESC
 
   s.homepage         = 'https://github.com/QQLS/BQCoverPage'
@@ -27,7 +27,13 @@ TODO: Add long description of the pod here.
   s.author           = { 'QQLS' => '702166055@qq.com' }
   s.source           = { :git => 'https://github.com/QQLS/BQCoverPage.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  
+  ## swift_version need before deployment_target.
+  # related platform
+  s.platform = :ios
+  # dependency Swift version.
+  s.swift_version = '4.0'
+  
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'BQCoverPage/Classes/**/*'

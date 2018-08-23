@@ -1,0 +1,22 @@
+{
+  "name": "BQCoverPage",
+  "version": "0.1.0",
+  "summary": "A short description of BQCoverPage.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/QQLS/BQCoverPage",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "QQLS": "702166055@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/QQLS/BQCoverPage.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "BQCoverPage/Classes/**/*"
+}

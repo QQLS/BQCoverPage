@@ -1,0 +1,6 @@
+framework module BQCoverPage {
+  umbrella header "BQCoverPage-umbrella.h"
+
+  export *
+  module * { export * }
+}

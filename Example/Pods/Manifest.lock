@@ -1,0 +1,16 @@
+PODS:
+  - BQCoverPage (0.1.0)
+
+DEPENDENCIES:
+  - BQCoverPage (from `../`)
+
+EXTERNAL SOURCES:
+  BQCoverPage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BQCoverPage: 30e6c63568f464b009fdd937ad5858a82714401e
+
+PODFILE CHECKSUM: 5de499fb80517abdf691244a61e56ad8c947d392
+
+COCOAPODS: 1.5.0
