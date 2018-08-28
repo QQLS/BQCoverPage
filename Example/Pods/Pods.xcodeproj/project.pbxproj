@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07BC563ACCD592D4507750A15347BFCD /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66530F62311E33252905E2EB686E2 /* ReplaceMe.swift */; };
 		1BDBAC720842253CE4B4ED64B86AC013 /* BQCoverPage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F59FE5C4165E6C113FC445E43AC79862 /* BQCoverPage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3240B7C3ECF251266E6C10B94578BE57 /* Pods-BQCoverPage_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98143643A01CCC09F14ED2611BB69D /* Pods-BQCoverPage_Tests-dummy.m */; };
+		37D30C88212ED627001153B8 /* BQPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D30C85212ED627001153B8 /* BQPageController.swift */; };
+		37D30C89212ED627001153B8 /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D30C86212ED627001153B8 /* Macro.swift */; };
+		37D30C8A212ED627001153B8 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D30C87212ED627001153B8 /* Protocol.swift */; };
+		37D30C8C2133A7A7001153B8 /* BQCoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D30C8B2133A7A7001153B8 /* BQCoverController.swift */; };
+		37D30C8E2133A7C1001153B8 /* BQTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D30C8D2133A7C1001153B8 /* BQTabController.swift */; };
+		37D30C9A21353DC5001153B8 /* BQPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D30C9721353DC5001153B8 /* BQPageContentView.swift */; };
+		37D30C9B21353DC5001153B8 /* BQPageTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D30C9821353DC5001153B8 /* BQPageTabItem.swift */; };
+		37D30C9C21353DC5001153B8 /* BQTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D30C9921353DC5001153B8 /* BQTabBar.swift */; };
 		5A82855A20BCA58A07F5CF62DEC732AB /* BQCoverPage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE23A2FD58C4989C5351BC1571DD66 /* BQCoverPage-dummy.m */; };
 		6CECFF3E4BD7B89488B1BABF1A6E2849 /* Pods-BQCoverPage_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 631638CA0B9D5DDD5262F8E47D6CD27E /* Pods-BQCoverPage_Example-dummy.m */; };
 		936F946D8F0C5D4F369742FE2FB357E9 /* Pods-BQCoverPage_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 669F7A546B2EDC311EE91181D850A161 /* Pods-BQCoverPage_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,17 +47,25 @@
 		0ABE23A2FD58C4989C5351BC1571DD66 /* BQCoverPage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BQCoverPage-dummy.m"; sourceTree = "<group>"; };
 		0CCDEA6BE3E75DA17D36F1204B24A686 /* Pods-BQCoverPage_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BQCoverPage_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		14305A5EF960F96FA30CA8C66148147B /* BQCoverPage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BQCoverPage.modulemap; sourceTree = "<group>"; };
-		1BBFB9295F1601626F54898E80BCA65D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1BBFB9295F1601626F54898E80BCA65D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1DB6B06E4F4D408ABEE450EAB92DD329 /* BQCoverPage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BQCoverPage.xcconfig; sourceTree = "<group>"; };
 		1E576FE57B03DAA49F8BDF32811262E1 /* Pods-BQCoverPage_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BQCoverPage_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		27AB0E8FD751FBB1213D634898885A4A /* Pods-BQCoverPage_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BQCoverPage_Tests-resources.sh"; sourceTree = "<group>"; };
 		2831AB3E09159A7DB91D037B650C561B /* Pods-BQCoverPage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BQCoverPage_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2B134448CEBABCFD99BCB67AA4D1F077 /* BQCoverPage.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BQCoverPage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2B134448CEBABCFD99BCB67AA4D1F077 /* BQCoverPage.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BQCoverPage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		32B759CBF919CB1EBE756EB5D5D9A419 /* Pods-BQCoverPage_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BQCoverPage_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3AC90CF28FA9E64180CEB2272FAC359F /* Pods_BQCoverPage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BQCoverPage_Tests.framework; path = "Pods-BQCoverPage_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D30C85212ED627001153B8 /* BQPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BQPageController.swift; sourceTree = "<group>"; };
+		37D30C86212ED627001153B8 /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Macro.swift; path = BQCoverPage/Classes/Macro.swift; sourceTree = "<group>"; };
+		37D30C87212ED627001153B8 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocol.swift; path = BQCoverPage/Classes/Protocol.swift; sourceTree = "<group>"; };
+		37D30C8B2133A7A7001153B8 /* BQCoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BQCoverController.swift; sourceTree = "<group>"; };
+		37D30C8D2133A7C1001153B8 /* BQTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BQTabController.swift; sourceTree = "<group>"; };
+		37D30C9721353DC5001153B8 /* BQPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BQPageContentView.swift; sourceTree = "<group>"; };
+		37D30C9821353DC5001153B8 /* BQPageTabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BQPageTabItem.swift; sourceTree = "<group>"; };
+		37D30C9921353DC5001153B8 /* BQTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BQTabBar.swift; sourceTree = "<group>"; };
+		3AC90CF28FA9E64180CEB2272FAC359F /* Pods_BQCoverPage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BQCoverPage_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2AA5DFE8E53058199F7CAD8C871424 /* Pods-BQCoverPage_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BQCoverPage_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3ECAD0E62F09652CA12CB78E9E3287FF /* Pods-BQCoverPage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BQCoverPage_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		41F8AC26BC767D17D65558759B3F2E40 /* Pods_BQCoverPage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BQCoverPage_Example.framework; path = "Pods-BQCoverPage_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41F8AC26BC767D17D65558759B3F2E40 /* Pods_BQCoverPage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BQCoverPage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		422C789C26BD80FC444E7ADBDFDFAC0B /* Pods-BQCoverPage_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BQCoverPage_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4EE4975350CC86FE66ABC3D79B52D355 /* Pods-BQCoverPage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BQCoverPage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -59,16 +74,15 @@
 		7AD363EEDECF8E0F4FAA8A13B5482747 /* Pods-BQCoverPage_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BQCoverPage_Example.modulemap"; sourceTree = "<group>"; };
 		9026A811870146C87D8DCA43223511A7 /* Pods-BQCoverPage_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BQCoverPage_Tests-umbrella.h"; sourceTree = "<group>"; };
 		914A568CCD95789B7F81053D9F18D7AA /* Pods-BQCoverPage_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BQCoverPage_Tests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9857615509F433812ACC17239B1E3EC2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FBE153BE246DA1CF19AB6F0B0BB6C03 /* Pods-BQCoverPage_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BQCoverPage_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A1BDE944FB0DEB9313794AFE22A0D388 /* BQCoverPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BQCoverPage.framework; path = BQCoverPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1BDE944FB0DEB9313794AFE22A0D388 /* BQCoverPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BQCoverPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E983F6FD133F203CA1D0DCA2D4E710 /* Pods-BQCoverPage_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BQCoverPage_Example-resources.sh"; sourceTree = "<group>"; };
 		BDD413EE447382C4B46F6432CDB33712 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7991DC108BB7CAEFC70AEC31599BFB4 /* Pods-BQCoverPage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BQCoverPage_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		DCA66530F62311E33252905E2EB686E2 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = BQCoverPage/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		E60F45890597A322164493ECCF9216DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA66B3CE3A709FF7E8C99132760C6A29 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EA66B3CE3A709FF7E8C99132760C6A29 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F59FE5C4165E6C113FC445E43AC79862 /* BQCoverPage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BQCoverPage-umbrella.h"; sourceTree = "<group>"; };
 		F807F490F1B82428E4D8DA9F04DDC33E /* BQCoverPage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BQCoverPage-prefix.pch"; sourceTree = "<group>"; };
 		FE98143643A01CCC09F14ED2611BB69D /* Pods-BQCoverPage_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BQCoverPage_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -120,6 +134,28 @@
 			path = "Target Support Files/Pods-BQCoverPage_Example";
 			sourceTree = "<group>";
 		};
+		37D30C84212ED627001153B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37D30C85212ED627001153B8 /* BQPageController.swift */,
+				37D30C8B2133A7A7001153B8 /* BQCoverController.swift */,
+				37D30C8D2133A7C1001153B8 /* BQTabController.swift */,
+			);
+			name = Controller;
+			path = BQCoverPage/Classes/Controller;
+			sourceTree = "<group>";
+		};
+		37D30C9621353DC5001153B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37D30C9721353DC5001153B8 /* BQPageContentView.swift */,
+				37D30C9821353DC5001153B8 /* BQPageTabItem.swift */,
+				37D30C9921353DC5001153B8 /* BQTabBar.swift */,
+			);
+			name = View;
+			path = BQCoverPage/Classes/View;
+			sourceTree = "<group>";
+		};
 		4867233A9A684DB0EAE78294E2EE05E8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +176,10 @@
 		6780AE6525497D3FFFDA56679A4E8C3B /* BQCoverPage */ = {
 			isa = PBXGroup;
 			children = (
-				DCA66530F62311E33252905E2EB686E2 /* ReplaceMe.swift */,
+				37D30C9621353DC5001153B8 /* View */,
+				37D30C84212ED627001153B8 /* Controller */,
+				37D30C86212ED627001153B8 /* Macro.swift */,
+				37D30C87212ED627001153B8 /* Protocol.swift */,
 				6D70EB0DD6664637554E3FE8B5C3FFDA /* Pod */,
 				84F71324758CF77364D389A02080A351 /* Support Files */,
 			);
@@ -316,8 +355,10 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BQ;
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = QQLS;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -343,8 +384,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D30C9A21353DC5001153B8 /* BQPageContentView.swift in Sources */,
+				37D30C9C21353DC5001153B8 /* BQTabBar.swift in Sources */,
+				37D30C8E2133A7C1001153B8 /* BQTabController.swift in Sources */,
+				37D30C89212ED627001153B8 /* Macro.swift in Sources */,
 				5A82855A20BCA58A07F5CF62DEC732AB /* BQCoverPage-dummy.m in Sources */,
-				07BC563ACCD592D4507750A15347BFCD /* ReplaceMe.swift in Sources */,
+				37D30C9B21353DC5001153B8 /* BQPageTabItem.swift in Sources */,
+				37D30C88212ED627001153B8 /* BQPageController.swift in Sources */,
+				37D30C8A212ED627001153B8 /* Protocol.swift in Sources */,
+				37D30C8C2133A7A7001153B8 /* BQCoverController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
