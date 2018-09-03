@@ -17,7 +17,7 @@ class BQPageController: UIViewController {
     private let kContentOffsetKey = "contentOffset"
     
     weak var delegate: BQPageDelegate?
-    weak var dataSource: BQPageDataSource!
+    weak var dataSource: BQPageDataSource?
     
     private var memoryCaches: [Int: UIViewController] = [:]
     private var lastContentOffsets: [Int: CGFloat] = [:]
@@ -65,7 +65,7 @@ extension BQPageController {
         
         if firstWillAppear {
             delegate?.pageController(self, willLeave: controller(at: lastSelectedIndex), toVC: controller(at: currentPageIndex))
-            if let gesture = dataSource.screenEdgePanGestureRecognizer() {
+            if let gesture = dataSource?.screenEdgePanGestureRecognizer() {
                 contentView.panGestureRecognizer.require(toFail: gesture)
             } else if let gesture = screenEdgePanGestureRecognizer() {
                 contentView.panGestureRecognizer.require(toFail: gesture)
@@ -125,7 +125,10 @@ extension BQPageController {
         // 告诉外部将要改变
         delegate?.willChangeInit()
         // 高度外部是从哪到哪
-        delegate?.pageController(self, willLeave: dataSource.controller(at: lastSelectedIndex), toVC: dataSource.controller(at: currentPageIndex))
+        if let fromVC = dataSource?.controller(at: lastSelectedIndex),
+            let toVC = dataSource?.controller(at: currentPageIndex) {
+            delegate?.pageController(self, willLeave: fromVC, toVC: toVC)
+        }
         // 再次计算布局
         updateContentViewLayoutIfNeeded()
         
@@ -145,7 +148,10 @@ extension BQPageController {
         currentPageIndex = index
         
         delegate?.willChangeInit()
-        delegate?.pageController(self, willLeave: dataSource.controller(at: lastSelectedIndex), toVC: dataSource.controller(at: currentPageIndex))
+        if let fromVC = dataSource?.controller(at: lastSelectedIndex),
+            let toVC = dataSource?.controller(at: currentPageIndex) {
+            delegate?.pageController(self, willLeave: fromVC, toVC: toVC)
+        }
         addControllerToShow(at: index)
         
         beginAnimation(animated)
@@ -236,7 +242,7 @@ extension BQPageController {
         if let controller = controller(at: index) as? BQSubpageDataSource, let scrollView = controller.bqScrollView() {
             let atBeginOffset = scrollView.contentOffset.y == -(scrollView.contentInset.top)
             let contentOffset = scrollView.contentOffset
-            scrollView.contentInset = UIEdgeInsets(top: dataSource.subpageTopInset(at: index), left: scrollView.contentInset.left, bottom: scrollView.contentInset.bottom, right: scrollView.contentInset.right)
+            scrollView.contentInset = UIEdgeInsets(top: dataSource?.subpageTopInset(at: index) ?? 0, left: scrollView.contentInset.left, bottom: scrollView.contentInset.bottom, right: scrollView.contentInset.right)
             scrollView.contentOffset = contentOffset
             if needChangeOffset {
                 scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: offset)
@@ -258,8 +264,8 @@ extension BQPageController {
         return -1
     }
     
-    // 更新指定位置的 Controller
-    func update(at index: Int) {
+    /// 更新当前选中的索引
+    func updateCurrent(at index: Int) {
         currentPageIndex = index
     }
     

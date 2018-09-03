@@ -59,5 +59,37 @@ public extension CGFloat {
     /// Top height = statusBarHeight + navigationBarHeight
     public static let topHeight: CGFloat  = .statusBarHeight + .navigationBarHeight
     
+    public var HScale: CGFloat {
+        if CGFloat.screenWidth == 375 { return self }
+        
+        let result = (self >= 0 ? self : -self) / 375.0 * CGFloat.screenWidth
+        return self >= 0 ? floor(result) : -floor(result)
+    }
+    
+    public var VScale: CGFloat {
+        if CGFloat.screenHeight == 667 { return self }
+        
+        let result = (self >= 0 ? self : -self) / 667.0 * CGFloat.screenHeight
+        return self >= 0 ? floor(result) : -floor(result)
+    }
+    
+}
+
+extension Int {
+    
+    public var HScale: CGFloat {
+        if CGFloat.screenWidth == 375 { return CGFloat(self) }
+        
+        let result = CGFloat(self >= 0 ? self : -self) / 375.0 * CGFloat.screenWidth
+        return self >= 0 ? floor(result) : -floor(result)
+    }
+    
+    public var VScale: CGFloat {
+        if CGFloat.screenHeight == 667 { return CGFloat(self) }
+        
+        let result = CGFloat(self >= 0 ? self : -self) / 667.0 * CGFloat.screenHeight
+        return self >= 0 ? floor(result) : -floor(result)
+    }
+    
 }
 
